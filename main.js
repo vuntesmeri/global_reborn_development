@@ -1,5 +1,5 @@
 const spinners = document.querySelector('.loading').children
-const zones = ['America/New_York','Europe/Dublin','Asia/Singapore','Europe/Zurich',
+const zones = ['America/New_York','Europe/Dublin','Europe/Zurich','Asia/Singapore',
     'Asia/Tokyo']
 const number_sec = (Math.random() * (11.8 - 5) + 5) * 1000;
 
@@ -95,7 +95,7 @@ function clock(id) {
 }
 
 function updateHands() {
-    const names = ['America/New_York', 'Europe/Dublin', 'Asia/Singapore', 'Europe/Zurich',
+    const names = ['America/New_York', 'Europe/Dublin', 'Europe/Zurich','Asia/Singapore', 
         'Asia/Tokyo'];
     for (let id in names) {
         const zoneTime = new Date().toLocaleString("en-US", { timeZone: names[id] });

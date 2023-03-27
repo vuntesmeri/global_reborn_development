@@ -29,6 +29,7 @@
 .loading {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: center;
     margin-top: 0px;
     margin-bottom: 3vh;
@@ -38,7 +39,8 @@
 @media (max-width:700px) {
     .loading {
         display: grid;
-        grid-auto-flow: row dense;
+        grid-auto-flow: inherit;
+        justify-content: flex-start;
     }
 }
 
@@ -47,15 +49,22 @@
     height: 9px;
     position: relative;
     margin: 2vw;
-}
-
-.loading-spinner {
     display: none;
 }
+
+/* .loading-spinner {
+   
+} */
 
 .glow {
     display: block;
 }
+
+/* @media (max-width:700px) {
+    .glow {
+        margin: 2vw;
+    }
+} */
 
 .loading-spinner:before {
     content: "";
@@ -191,6 +200,7 @@
 .clock {
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     margin: 0 1.3vw;
@@ -205,8 +215,10 @@
 @media (max-width: 700px) {
     .clock {
         display: grid;
-        grid-template-columns: 1fr 3fr;
+        grid-template-columns: 1fr 1fr;
         justify-items: left;
+        height: 12vh;
+
     }
 
     .clock>p {
