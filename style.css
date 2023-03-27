@@ -122,12 +122,9 @@
     padding: 0px;
     margin: 2vw;
     background-color: #0B0E28;
-    /* height: 250px; */
     display: flex;
     flex-direction: column;
-    /* justify-content: flex-start; */
     align-items: center;
-    /* width: 100%; */
 }
 
 .principals-title {
@@ -150,7 +147,10 @@
 
 .principals__ikons {
     width: 100%;
-    margin: 2vw auto;
+    margin-top: 5vw;
+    margin-bottom: 2vw;
+    margin-left: auto;
+    margin-right: auto;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -230,7 +230,7 @@
 .main_list {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-start;
     gap: 1vw;
     list-style: none;
     font-family: 'Montserrat', sans-serif;
@@ -262,4 +262,20 @@
 
 .footer_info img {
     width: 200px;
+}
+
+a,
+li {
+    text-decoration: none;
+    color: inherit;
+}
+
+li:hover {
+    color: #CE9704;
+    cursor: pointer;
+}
+
+li:nth-child(1):hover {
+    color: inherit;
+    cursor: default;
 }

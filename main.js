@@ -1,13 +1,13 @@
 const spinners = document.querySelector('.loading').children
 const zones = ['America/New_York','Europe/Dublin','Asia/Singapore','Europe/Zurich',
     'Asia/Tokyo']
-
+const number_sec = (Math.random() * (11.8 - 5) + 5) * 1000;
 
 const sorry = document.querySelector('.main__info');
 setTimeout(() => {
     sorry.style.display='block'; 
     [...spinners].forEach
-}, 12000);
+}, number_sec + 400);
 
 
 let i = 0;
@@ -21,11 +21,12 @@ const intervalId = setInterval(() => {
 }, 1000)
 
 
+
 setTimeout(() => {
     [...spinners].forEach(el => {
         el.style.display = 'none';
     })
-}, 11800)
+}, number_sec)
 
 setTimeout(() => {
     [...spinners].forEach((el) => {
@@ -37,7 +38,7 @@ setTimeout(() => {
         el.animationDuration = '1s';
 
     })
-}, 12500)
+}, number_sec + 700)
 
 function clock(id) {
     const divclock = document.createElement('div')
@@ -124,5 +125,18 @@ setTimeout(() => {
         }
     }, 1100);
     setInterval(updateHands, 1000)
-}, 12900)
- 
+}, number_sec + 1100)
+
+const togo = document.querySelector('.main')
+const forward = document.querySelector('.principals-button')
+forward.addEventListener('click', (e) => {
+    e.preventDefault()
+    togo.scrollIntoView({ block: "center", behavior: 'smooth' })
+})
+
+const button_reload = document.querySelectorAll('.ikons')
+button_reload.forEach(el=> el.addEventListener('click', 
+    () => {
+        togo.scrollIntoView({block: "center", behavior: "smooth"})
+        window.location.reload()
+    }))
