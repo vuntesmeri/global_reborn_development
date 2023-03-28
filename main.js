@@ -1,6 +1,6 @@
 
 const zones = ['America/New_York','Europe/Dublin','Europe/Zurich','Asia/Singapore',
-    'Asia/Tokyo']
+    'Asia/Tokyo', 'Asia/Dubai']
 const number_sec = (Math.random() * (11.8 - 5) + 5) * 1000;
 const mainfield = document.querySelector('.main');
 const sorry = document.querySelector('.main__info');
@@ -114,7 +114,7 @@ function clock(id) {
 
 function updateHands() {
     const names = ['America/New_York', 'Europe/Dublin', 'Europe/Zurich','Asia/Singapore', 
-        'Asia/Tokyo'];
+        'Asia/Tokyo','Asia/Dubai'];
     for (let id in names) {
         const zoneTime = new Date().toLocaleString("en-US", { timeZone: names[id] });
         const [hours, minutes, seconds] = zoneTime.split(" ")[1].split(":");
