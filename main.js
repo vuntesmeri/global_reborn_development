@@ -131,12 +131,13 @@ const togo = document.querySelector('.main')
 const forward = document.querySelector('.principals-button')
 forward.addEventListener('click', (e) => {
     e.preventDefault()
-    togo.scrollIntoView({ block: "center", behavior: 'smooth' })
+    window.scrollTo(0, 0)
+ 
 })
 
 const button_reload = document.querySelectorAll('.ikons')
 button_reload.forEach(el=> el.addEventListener('click', 
     () => {
-        togo.scrollIntoView({block: "center", behavior: "smooth"})
+        window.scrollTo(0, 0)
         window.location.reload()
     }))
