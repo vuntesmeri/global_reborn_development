@@ -129,9 +129,11 @@ function updateHands() {
     }
 }
 
+const mainfield = document.querySelector('.main');
 
 setTimeout(() => {
     let j = 0;
+    mainfield.classList.add('fullscreen')
     loading.classList.add('grid_change')
     
     const intId = setInterval(() => {
