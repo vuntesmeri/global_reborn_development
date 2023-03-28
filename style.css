@@ -1,11 +1,18 @@
-* {
-    margin: 0;
-    padding: 0;
+html {
+    overflow-x: hidden;
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
 }
 
 .main {
     background-image: url("./img/skyscarpMin.jpg");
-    background-position: bottom;
+    /* background-position: bottom; */
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
@@ -30,12 +37,14 @@
 
 @media (max-width:700px) {
     .main {
+        /* margin: 0px;
+        padding: 0px; */
         height: max-content;
     }
 
     .main-logo {
         width: 80vw;
-        margin: 5vw;
+        margin: 0vw 5vw;
     }
 }
 
