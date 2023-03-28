@@ -2,11 +2,12 @@
 const zones = ['America/New_York','Europe/Dublin','Europe/Zurich','Asia/Singapore',
     'Asia/Tokyo']
 const number_sec = (Math.random() * (11.8 - 5) + 5) * 1000;
-
+const mainfield = document.querySelector('.main');
 const sorry = document.querySelector('.main__info');
 const loading = document.querySelector('.loading')
 
 setTimeout(() => {
+    mainfield.classList.add('fullscreen')
     sorry.style.display='block'; 
 }, number_sec + 400);
 
@@ -129,13 +130,10 @@ function updateHands() {
     }
 }
 
-const mainfield = document.querySelector('.main');
 
 setTimeout(() => {
-    let j = 0;
-    mainfield.classList.add('fullscreen')
-    loading.classList.add('grid_change')
-    
+    let j = 0;   
+    loading.classList.add('grid_change')  
     const intId = setInterval(() => {
         if (j < zones.length) {
             // clock[j].style.position = 'relative'
