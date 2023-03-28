@@ -19,7 +19,7 @@
     justify-content: center;
 }
 
-@media (max-width:700px) {
+@media (max-width:744px) {
     .main {
         height: max-content;
     }
@@ -82,7 +82,7 @@
     }
 }
 
-@media (max-width:700px) {
+@media (max-width:744px) {
     .loading {
         display: grid;
         grid-auto-flow: inherit;
@@ -199,7 +199,7 @@
 .clock {
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
     justify-content: center;
     align-items: center;
     margin: 0 1.3vw;
@@ -211,7 +211,7 @@
     font-weight: 500;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 744px) {
     .clock {
         display: grid;
         grid-template-columns: 1fr 3fr;
