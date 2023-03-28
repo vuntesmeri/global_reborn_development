@@ -23,11 +23,15 @@ setTimeout(() => {
 // }, 1000)
 
 let i = 0;
+
 const intervalId = setInterval(() => {
-    if (i <= number_sec) {
+    console.log(i, number_sec, (number_sec - i) / 1000);
+    if (i < number_sec) {
         const spinner = document.createElement('div')
         spinner.classList.add('loading-spinner')
+        // spinner.style.marginRight = `${(number_sec - i) / 1000}vw`
         loading.append(spinner)
+        
         // spinner.classList.add('glow')
         i+=1000;
     } else {
@@ -130,8 +134,10 @@ function updateHands() {
 
 setTimeout(() => {
     let j = 0;
+    loading.classList.add('grid_change')
     const intId = setInterval(() => {
         if (j < zones.length) {
+            // clock[j].style.position = 'relative'
             document.querySelector('.loading').replaceChild(clock(j), spinners[j])
             // spinners[spinners.length-j-1].style.animationDuration = `${1/j}s`
             j++
@@ -140,6 +146,7 @@ setTimeout(() => {
         }
     }, 600);
     setInterval(updateHands, 1000)
+    
 }, number_sec + 1100)
     
 
