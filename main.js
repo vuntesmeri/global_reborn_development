@@ -1,4 +1,3 @@
-
 const zones = ['America/New_York','Europe/Dublin','Europe/Zurich','Asia/Singapore',
     'Asia/Tokyo', 'Asia/Dubai']
 const number_sec = (Math.random() * (11.8 - 5) + 5) * 1000;
@@ -11,28 +10,13 @@ setTimeout(() => {
     sorry.style.display='block'; 
 }, number_sec + 400);
 
-
-// let i = 0;
-// const intervalId = setInterval(() => {
-//     if (i < spinners.length) {
-//         spinners[i].classList.add('glow')
-//         i++;
-//     } else {
-//         clearInterval(intervalId);
-//     }
-// }, 1000)
-
 let i = 0;
-
 const intervalId = setInterval(() => {
     console.log(i, number_sec, (number_sec - i) / 1000);
     if (i < number_sec) {
         const spinner = document.createElement('div')
         spinner.classList.add('loading-spinner')
-        // spinner.style.marginRight = `${(number_sec - i) / 1000}vw`
         loading.append(spinner)
-        
-        // spinner.classList.add('glow')
         i+=1000;
     } else {
         clearInterval(intervalId);
@@ -46,17 +30,6 @@ setTimeout(() => {
         (index < zones.length - 1) ? el.style.display = 'none' : el.remove();
     })
 }, number_sec)
-
-// setTimeout(() => {
-//     [...spinners].forEach((el) => {
-//         el.style.width = '20px';
-//         el.style.height = '20px';
-//         el.style.margin = '4vw';
-//         el.style.display = 'block';
-//         el.animationDuration = '1s';
-
-//     })
-// }, number_sec + 700)
 
 function clock(id) {
     const divclock = document.createElement('div')
@@ -136,26 +109,20 @@ setTimeout(() => {
     loading.classList.add('grid_change')  
     const intId = setInterval(() => {
         if (j < zones.length) {
-            // clock[j].style.position = 'relative'
             document.querySelector('.loading').replaceChild(clock(j), spinners[j])
-            // spinners[spinners.length-j-1].style.animationDuration = `${1/j}s`
             j++
         } else {
             clearInterval(intId)
         }
     }, 600);
     setInterval(updateHands, 1000)
-    
 }, number_sec + 500)
     
-
-
 const togo = document.querySelector('.main')
 const forward = document.querySelector('.principals-button')
 forward.addEventListener('click', (e) => {
     e.preventDefault()
     window.scrollTo(0, 0)
- 
 })
 
 const button_reload = document.querySelectorAll('.ikons')

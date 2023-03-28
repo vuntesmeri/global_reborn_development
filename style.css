@@ -12,7 +12,6 @@ body {
 
 .main {
     background-image: url("./img/skyscarpMin.jpg");
-    /* background-position: bottom; */
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
@@ -61,14 +60,8 @@ body {
     height: 7px;
     position: relative;
     margin: 2vw;
-    /* visibility: hidden; */
     display: block;
 }
-
-/* .glow {
-    /* visibility: visible; */
-/* display: block;
-} */
 
 .loading-spinner:before {
     content: "";
@@ -155,7 +148,6 @@ body {
 }
 
 .principals {
-    /* padding: 0px 2vw; */
     width: 100vw;
     margin-bottom: 2vw;
     background-color: #0B0E28;
@@ -188,10 +180,8 @@ body {
     margin-bottom: 2vw;
     margin-left: auto;
     margin-right: auto;
-    /* padding: 2vw; */
     display: flex;
     flex-direction: row;
-    /* flex-wrap: wrap; */
     row-gap: 2vw;
     justify-content: space-around;
 }
@@ -204,10 +194,8 @@ body {
 
 .principals__ikons img {
     width: 108px;
-    /* min-width: 4vw; */
     height: 108px;
     margin: auto;
-    /* min-height: 4vw; */
 }
 
 .principals__ikons p {
@@ -249,7 +237,6 @@ body {
 .clock {
     display: flex;
     flex-direction: column;
-    /* flex-wrap: wrap; */
     justify-content: center;
     align-items: center;
     margin: 0 1.3vw;
@@ -295,13 +282,10 @@ body {
 }
 
 @media (max-width: 700px) {
-
     .footer_main {
         grid-template-columns: 1fr 1fr;
-        /* justify-content: space-evenly; */
         justify-items: start;
         align-items: flex-start;
-        /* margin: 3vw; */
     }
 
     .main_list {
