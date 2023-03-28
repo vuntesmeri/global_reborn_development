@@ -4,7 +4,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
-    margin: 2vw;
+    margin: 0vw 0vw 2vw 0vw;
     padding: 0px;
 }
 
@@ -136,7 +136,7 @@
 
 .principals {
     padding: 0px;
-    margin: 2vw;
+    margin: 2vw 0vw;
     background-color: #0B0E28;
     display: flex;
     flex-direction: column;
@@ -245,7 +245,7 @@
 }
 
 .footer {
-    margin: 2vw;
+    margin: 2vw 0vw;
     padding-top: 2vw;
     background-color: #EEEEEE;
 }
