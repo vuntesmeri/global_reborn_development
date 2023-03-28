@@ -8,7 +8,6 @@ const loading = document.querySelector('.loading')
 
 setTimeout(() => {
     sorry.style.display='block'; 
-    // [...spinners].forEach
 }, number_sec + 400);
 
 
@@ -147,7 +146,7 @@ setTimeout(() => {
     }, 600);
     setInterval(updateHands, 1000)
     
-}, number_sec + 1100)
+}, number_sec + 500)
     
 
 
