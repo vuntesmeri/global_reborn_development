@@ -37,8 +37,6 @@ body {
 
 @media (max-width:700px) {
     .main {
-        /* margin: 0px;
-        padding: 0px; */
         height: max-content;
     }
 
@@ -112,7 +110,6 @@ body {
     .grid_change {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
-
     }
 
     .loading-spinner {
@@ -186,18 +183,17 @@ body {
 }
 
 .principals__ikons {
-    width: 90%;
+    width: 100%;
     margin-top: 5vw;
     margin-bottom: 2vw;
     margin-left: auto;
     margin-right: auto;
-    padding: 2vw;
+    /* padding: 2vw; */
     display: flex;
     flex-direction: row;
     /* flex-wrap: wrap; */
-    row-gap: 1vw;
+    row-gap: 2vw;
     justify-content: space-around;
-    /* justify-items: stretch; */
 }
 
 .ikons {
@@ -228,6 +224,7 @@ body {
         grid-template-columns: 1fr 1fr 1fr;
         justify-content: space-between;
         justify-items: center;
+        row-gap: 6vw;
     }
 
     .principals-title {
@@ -245,6 +242,7 @@ body {
 
     .principals__ikons p {
         font-size: 14px;
+        width: 108px;
     }
 }
 
@@ -273,7 +271,7 @@ body {
 .footer {
     width: 100vw;
     margin: 0;
-    padding-top: 2vw;
+    padding: 2vw auto;
     background-color: #EEEEEE;
 }
 
@@ -282,15 +280,15 @@ body {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-auto-columns: auto;
+    justify-content: center;
     justify-items: center;
-    /* margin: 3vw; */
 }
 
 .main_list {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    gap: 1vw;
+    gap: .5vw;
     list-style: none;
     font-family: 'Montserrat', sans-serif;
     font-size: 16px;
@@ -300,24 +298,25 @@ body {
 
     .footer_main {
         grid-template-columns: 1fr 1fr;
+        /* justify-content: space-evenly; */
         justify-items: start;
-        margin: 3vw;
+        align-items: flex-start;
+        /* margin: 3vw; */
     }
 
     .main_list {
         font-size: 16px;
-        margin: 2vw;
     }
 }
 
 .footer_info {
-    margin-top: 2vw;
+    margin-top: 1vw;
     margin-left: 2vw;
     margin-right: 2vw;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 2vw;
+    gap: 1vw;
     justify-content: space-around;
     align-items: center;
     font-family: 'Montserrat', sans-serif;
