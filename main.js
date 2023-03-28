@@ -42,9 +42,8 @@ const intervalId = setInterval(() => {
 const spinners = document.querySelector('.loading').children
 
 setTimeout(() => {
-    [...spinners].forEach((el,index) => {
-        
-        (index >= zones.length-1)? el.remove(): el.style.display = 'none';
+    [...spinners].forEach((el, index) => {
+        (index < zones.length - 1) ? el.style.display = 'none' : el.remove();
     })
 }, number_sec)
 
@@ -135,6 +134,7 @@ function updateHands() {
 setTimeout(() => {
     let j = 0;
     loading.classList.add('grid_change')
+    
     const intId = setInterval(() => {
         if (j < zones.length) {
             // clock[j].style.position = 'relative'
