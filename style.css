@@ -45,12 +45,14 @@
     height: 9px;
     position: relative;
     margin: 2vw;
-    display: none;
+    /* visibility: hidden; */
+    /* display: none; */
 }
 
-.glow {
-    display: block;
-}
+/* .glow {
+    /* visibility: visible; */
+/* display: block;
+} */
 
 .loading-spinner:before {
     content: "";
@@ -90,9 +92,9 @@
     }
 
     .loading-spinner {
-        width: 5px;
-        height: 5px;
-        margin: 10vw;
+        width: 9px;
+        height: 9px;
+        margin: 9vw;
     }
 }
 

@@ -1,31 +1,46 @@
-const spinners = document.querySelector('.loading').children
+
 const zones = ['America/New_York','Europe/Dublin','Europe/Zurich','Asia/Singapore',
     'Asia/Tokyo']
 const number_sec = (Math.random() * (11.8 - 5) + 5) * 1000;
 
 const sorry = document.querySelector('.main__info');
+const loading = document.querySelector('.loading')
+
 setTimeout(() => {
     sorry.style.display='block'; 
-    [...spinners].forEach
+    // [...spinners].forEach
 }, number_sec + 400);
 
 
+// let i = 0;
+// const intervalId = setInterval(() => {
+//     if (i < spinners.length) {
+//         spinners[i].classList.add('glow')
+//         i++;
+//     } else {
+//         clearInterval(intervalId);
+//     }
+// }, 1000)
+
 let i = 0;
 const intervalId = setInterval(() => {
-    if (i < spinners.length) {
-        spinners[i].classList.add('glow')
-        i++;
+    if (i <= number_sec) {
+        const spinner = document.createElement('div')
+        spinner.classList.add('loading-spinner')
+        loading.append(spinner)
+        // spinner.classList.add('glow')
+        i+=1000;
     } else {
         clearInterval(intervalId);
     }
 }, 1000)
 
-
+const spinners = document.querySelector('.loading').children
 
 setTimeout(() => {
-    [...spinners].forEach(el => {
-        el.style.display = 'none';
+    [...spinners].forEach((el,index) => {
         
+        (index >= zones.length-1)? el.remove(): el.style.display = 'none';
     })
 }, number_sec)
 
@@ -118,14 +133,16 @@ setTimeout(() => {
     const intId = setInterval(() => {
         if (j < zones.length) {
             document.querySelector('.loading').replaceChild(clock(j), spinners[j])
-            spinners[spinners.length-j-1].style.animationDuration = `${1/j}s`
+            // spinners[spinners.length-j-1].style.animationDuration = `${1/j}s`
             j++
         } else {
             clearInterval(intId)
         }
-    }, 1100);
+    }, 600);
     setInterval(updateHands, 1000)
 }, number_sec + 1100)
+    
+
 
 const togo = document.querySelector('.main')
 const forward = document.querySelector('.principals-button')
