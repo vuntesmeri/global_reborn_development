@@ -25,20 +25,20 @@ const intervalId = setInterval(() => {
 setTimeout(() => {
     [...spinners].forEach(el => {
         el.style.display = 'none';
+        
     })
 }, number_sec)
 
-setTimeout(() => {
-    [...spinners].forEach((el) => {
-        el.style.width = '20px';
-        el.style.height = '20px';
-        el.style.margin = '4vw';
-        
-        el.style.display = 'block';
-        el.animationDuration = '1s';
+// setTimeout(() => {
+//     [...spinners].forEach((el) => {
+//         el.style.width = '20px';
+//         el.style.height = '20px';
+//         el.style.margin = '4vw';
+//         el.style.display = 'block';
+//         el.animationDuration = '1s';
 
-    })
-}, number_sec + 700)
+//     })
+// }, number_sec + 700)
 
 function clock(id) {
     const divclock = document.createElement('div')
